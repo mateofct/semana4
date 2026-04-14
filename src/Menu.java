@@ -11,6 +11,10 @@ public class Menu {
 
     }
 
+    public static int leerOpcion(Scanner scanner) {
+        int opcionSelecionada = scanner.nextInt();
+        return opcionSelecionada;
+    }
 
 
 
