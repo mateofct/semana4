@@ -20,4 +20,8 @@ public class OperacionesAritmeticas {
         System.out.println("8. Calcular porcentaje de un número con respecto a otro");
         System.out.println("9. Salir");
     }
+    public static int leerOpcionAritmetica(Scanner scanner) {
+        int OperacionSeleccionada = scanner.nextInt();
+        return OperacionSeleccionada;
+    }
 }
