@@ -48,7 +48,8 @@ public class OperacionesAritmeticas {
                 multiplicacion.ejecutarMultiplicacion(scanner);
                 break;
             case 4:
-                ejecutarDivision(scanner);
+                Division division = new Division();
+                division.ejecutarDivision(scanner);
                 break;
             case 5:
                 numeroMayor(scanner);
@@ -74,28 +75,7 @@ public class OperacionesAritmeticas {
 
 
 
-    public static double[] pedirDatoDivision(Scanner scanner){
-        System.out.println("Ingrese el numerador:");
-        double numerador = scanner.nextDouble();
-        System.out.println("Ingrese el denominador:");
-        double denominador = scanner.nextDouble();
-        return new double[]{numerador, denominador};
-    }
-    public static double calcularDivision(double numerador, double denominador){
-        double resultadoDivision = numerador / denominador;
-        return resultadoDivision;
-    }
-    public static void mostrarResultadoDivision(double resultadoDivision) {
-        System.out.println("El resultado de la división es: " + resultadoDivision);
-    }
-    public static void ejecutarDivision(Scanner scanner){
-        double[] datosDivision = pedirDatoDivision(scanner);
-        double numerador = datosDivision[0];
-        double denominador = datosDivision[1];
-        double resultadoDivision = calcularDivision(numerador, denominador);
-        mostrarResultadoDivision(resultadoDivision);
 
-    }
 
     public static void numeroMayor(Scanner scanner) {
         System.out.println("Ingrese el primer número:");
