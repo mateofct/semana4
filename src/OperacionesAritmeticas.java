@@ -133,5 +133,12 @@ public class OperacionesAritmeticas {
         System.out.println("El resultado de la potencia es: " + resultadoPotencia);
 
     }
-
+    public static void porcentaje(Scanner scanner){
+        System.out.println("Ingrese el número de porcentaje:");
+        double porcentaje = scanner.nextDouble();
+        System.out.println("Ingrese el número del cual se quiere calcular el porcentaje:");
+        double numeroBase = scanner.nextDouble();
+        double resultadoPorcentaje = (porcentaje / 100) * numeroBase;
+        System.out.println("El resultado del porcentaje es: " + resultadoPorcentaje);
+    }
 
