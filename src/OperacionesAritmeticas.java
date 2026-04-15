@@ -91,7 +91,12 @@ public class OperacionesAritmeticas {
         System.out.println("El resultado de la multiplicación es: " + resultadoMultiplicacion);
     }
     public static void division(Scanner scanner){
-        double
+        System.out.println("Ingrese el numerador de la división:");
+        double numerador = scanner.nextInt();
+        System.out.println("Ingrese el denominador de la división:");
+        double denominador = scanner.nextInt();
+        double resultadoDivision = numerador / denominador;
+        System.out.println("El resultado de la división es: " + resultadoDivision);
     }
 
 
