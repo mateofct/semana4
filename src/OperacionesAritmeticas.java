@@ -82,6 +82,10 @@ public class OperacionesAritmeticas {
         double resultadoresta = primerNumero - segundoNumero;
         System.out.println("El resultado de la resta es: " + resultadoresta);
     }
+    public static void multiplicacion(double primerNumero, double segundoNumero){
+        double resultadoMultiplicacion = primerNumero * segundoNumero;
+        System.out.println("El resultado de la multiplicación es: " + resultadoMultiplicacion);
+    }
 
 
 }
