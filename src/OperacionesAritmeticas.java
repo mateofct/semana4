@@ -72,11 +72,6 @@ public class OperacionesAritmeticas {
 
     }
 
-
-
-
-
-
     public static void numeroMayor(Scanner scanner) {
         System.out.println("Ingrese el primer número:");
         double primerNumero = scanner.nextDouble();
