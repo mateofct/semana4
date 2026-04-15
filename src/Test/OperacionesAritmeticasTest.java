@@ -21,6 +21,16 @@ public class OperacionesAritmeticasTest {
         double resultadoResta = Resta.calcularResta(-2,-3);
         assertEquals(1, resultadoResta);
     }
+    @Test
+    void multiplicacionSignosNegativo(){
+        double resultadoMultiplicacion = Multiplicacion.calcularMultiplicacion(-0.5, -6);
+        assertEquals(3, resultadoMultiplicacion);
+    }
+    @Test
+    void multiplicacionPorCero(){
+        double resultadoMultiplicacion = Multiplicacion.calcularMultiplicacion(55.5, 0);
+        assertEquals(0, resultadoMultiplicacion);
+    }
 
 
 
