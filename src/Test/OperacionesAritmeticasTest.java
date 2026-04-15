@@ -31,6 +31,17 @@ public class OperacionesAritmeticasTest {
         double resultadoMultiplicacion = Multiplicacion.calcularMultiplicacion(55.5, 0);
         assertEquals(0, resultadoMultiplicacion);
     }
+    @Test
+    void divisionPorCero(){
+        double resultadoDivision = Division.calcularDivision(40.3, 0);
+        assertEquals(Double.POSITIVE_INFINITY, resultadoDivision);
+    }
+    @Test
+    void divisionEntregaDecimales(){
+        double resultadoDivision = Division.calcularDivision(55, 2);
+        assertEquals(27.5, resultadoDivision);
+
+    }
 
 
 
