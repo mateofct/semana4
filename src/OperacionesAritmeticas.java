@@ -36,7 +36,8 @@ public class OperacionesAritmeticas {
 
         switch (operacionSeleccionada) {
             case 1:
-                ejecutarSuma(scanner);
+                Suma suma = new Suma();
+                suma.ejecutarSuma(scanner);
                 break;
             case 2:
                 ejecutarResta(scanner);
@@ -45,7 +46,7 @@ public class OperacionesAritmeticas {
                 ejecutarMultiplicacion(scanner);
                 break;
             case 4:
-                division(scanner);
+                ejecutarDivision(scanner);
                 break;
             case 5:
                 numeroMayor(scanner);
@@ -68,27 +69,7 @@ public class OperacionesAritmeticas {
 
     }
 
-    public static double[] pedirDatosSuma(Scanner scanner) {
-        System.out.println("Ingrese el primer número:");
-        double primerNumero = scanner.nextDouble();
-        System.out.println("Ingrese el segundo número:");
-        double segundoNumero = scanner.nextDouble();
-        return new double[]{primerNumero, segundoNumero};
-    }
-    public static double calcularSuma(double primerNumero, double segundoNumero){
-        double resultadoSuma = primerNumero + segundoNumero;
-        return resultadoSuma;
-    }
-    public static void mostrarResultadoSuma(double resultadoSuma){
-        System.out.println("El resultado de la suma es: " + resultadoSuma);
-    }
-    public static void ejecutarSuma(Scanner scanner){
-        double[] datosSuma = pedirDatosSuma(scanner);
-        double primerNumero = datosSuma[0];
-        double segundoNumero = datosSuma[1];
-        double resultadoSuma = calcularSuma(primerNumero, segundoNumero);
-        mostrarResultadoSuma(resultadoSuma);
-    }
+
     public static double[] pedirDatosResta(Scanner scanner){
         System.out.println("Ingrese el numero que va adelante de la resta:");
         double primerNumero = scanner.nextDouble();
@@ -131,14 +112,27 @@ public class OperacionesAritmeticas {
         double resultadoMultiplicacion = calcularMultiplicacion(primerNumero, segundoNumero);
         mostrarResultadoMultiplicacion(resultadoMultiplicacion);
     }
-
-    public static void division(Scanner scanner) {
-        System.out.println("Ingrese el numerador de la división:");
+    public static double[] pedirDatoDivision(Scanner scanner){
+        System.out.println("Ingrese el numerador:");
         double numerador = scanner.nextDouble();
-        System.out.println("Ingrese el denominador de la división:");
+        System.out.println("Ingrese el denominador:");
         double denominador = scanner.nextDouble();
+        return new double[]{numerador, denominador};
+    }
+    public static double calcularDivision(double numerador, double denominador){
         double resultadoDivision = numerador / denominador;
+        return resultadoDivision;
+    }
+    public static void mostrarResultadoDivision(double resultadoDivision) {
         System.out.println("El resultado de la división es: " + resultadoDivision);
+    }
+    public static void ejecutarDivision(Scanner scanner){
+        double[] datosDivision = pedirDatoDivision(scanner);
+        double numerador = datosDivision[0];
+        double denominador = datosDivision[1];
+        double resultadoMultiplicacion = calcularMultiplicacion(numerador, denominador);
+        mostrarResultadoMultiplicacion(resultadoMultiplicacion);
+
     }
 
     public static void numeroMayor(Scanner scanner) {
