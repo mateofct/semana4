@@ -103,14 +103,25 @@ public class OperacionesAritmeticas {
         double primerNumero = scanner.nextDouble();
         System.out.println("Ingrese el segundo número:");
         double segundoNumero = scanner.nextDouble();
-        if (primerNumero > segundoNumero){
+        if (primerNumero > segundoNumero) {
             double resultadoNumeroMayor = primerNumero;
             System.out.println("El número mayor es: " + resultadoNumeroMayor);
-        } else{
+        } else {
             double resultadoNumeroMayor = segundoNumero;
             System.out.println("El número mayor es: " + resultadoNumeroMayor);
         }
+    }
+    public static void numeroMenor(Scanner scanner) {
+        System.out.println("Ingrese el primer número:");
+        double primerNumero = scanner.nextDouble();
+        System.out.println("Ingrese el segundo número:");
+        double segundoNumero = scanner.nextDouble();
+        if (primerNumero < segundoNumero) {
+            double resultadoNumeroMenor = primerNumero;
+            System.out.println("El número menor es: " + resultadoNumeroMenor);
+        } else {
+            double resultadoNumeroMenor = segundoNumero;
+            System.out.println("El número menor es: " + resultadoNumeroMenor);
+        }
+    }
 
-
-
-}
