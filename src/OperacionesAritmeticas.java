@@ -44,7 +44,8 @@ public class OperacionesAritmeticas {
                 resta.ejecutarResta(scanner);
                 break;
             case 3:
-                ejecutarMultiplicacion(scanner);
+                Multiplicacion multiplicacion = new Multiplicacion();
+                multiplicacion.ejecutarMultiplicacion(scanner);
                 break;
             case 4:
                 ejecutarDivision(scanner);
@@ -72,27 +73,7 @@ public class OperacionesAritmeticas {
 
 
 
-    public static double[] pedirDatosMultipliacion(Scanner scanner){
-        System.out.println("Ingrese el primer número:");
-        double primerNumero = scanner.nextDouble();
-        System.out.println("Ingrese el segundo número:");
-        double segundoNumero = scanner.nextDouble();
-        return new double[]{primerNumero, segundoNumero};
-    }
-    public static double calcularMultiplicacion(double primerNumero, double segundoNumero){
-        double resultadoMultiplicacion = primerNumero * segundoNumero;
-        return resultadoMultiplicacion;
-    }
-    public static void mostrarResultadoMultiplicacion(double resultadoMultiplicacion){
-        System.out.println("El resultado de la multiplicación es: " + resultadoMultiplicacion);
-    }
-    public static void ejecutarMultiplicacion(Scanner scanner){
-        double[] datosMultiplicacion = pedirDatosMultipliacion(scanner);
-        double primerNumero = datosMultiplicacion[0];
-        double segundoNumero = datosMultiplicacion[1];
-        double resultadoMultiplicacion = calcularMultiplicacion(primerNumero, segundoNumero);
-        mostrarResultadoMultiplicacion(resultadoMultiplicacion);
-    }
+
     public static double[] pedirDatoDivision(Scanner scanner){
         System.out.println("Ingrese el numerador:");
         double numerador = scanner.nextDouble();
@@ -111,8 +92,8 @@ public class OperacionesAritmeticas {
         double[] datosDivision = pedirDatoDivision(scanner);
         double numerador = datosDivision[0];
         double denominador = datosDivision[1];
-        double resultadoMultiplicacion = calcularMultiplicacion(numerador, denominador);
-        mostrarResultadoMultiplicacion(resultadoMultiplicacion);
+        double resultadoDivision = calcularDivision(numerador, denominador);
+        mostrarResultadoDivision(resultadoDivision);
 
     }
 
