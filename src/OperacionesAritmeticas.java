@@ -29,7 +29,21 @@ public class OperacionesAritmeticas {
         int aritmeticaElegida = scanner.nextInt();
         return aritmeticaElegida;
     }
-    public static void ejecutarOpcion(int OperacionSeleccionada){
+    public double[] pedirNumeros(Scanner scanner) {
+        System.out.println("Ingrese el primer número:");
+        double primerNumero = scanner.nextInt();
+        System.out.println("Ingrese el segundo número:");
+        double segundoNumero = scanner.nextInt();
+        return new double[]{primerNumero, segundoNumero};
+    }
+    public static void ejecutarOpcion(int operacionSeleccionada){
+        switch(operacionSeleccionada) {
+            case 1:
+                suma(scanner);
+                break;
+            case 2:
+                resta(scanner);
+        }
 
     }
 
