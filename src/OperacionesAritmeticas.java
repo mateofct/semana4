@@ -68,36 +68,49 @@ public class OperacionesAritmeticas {
     }
     public static void suma(Scanner scanner) {
         System.out.println("Ingrese el primer número:");
-        double primerNumero = scanner.nextInt();
+        double primerNumero = scanner.nextDouble();
         System.out.println("Ingrese el segundo número:");
-        double segundoNumero = scanner.nextInt();
+        double segundoNumero = scanner.nextDouble();
         double resultadosuma = primerNumero + segundoNumero;
         System.out.println("El resultado de la suma es: " + resultadosuma);
     }
     public static void resta(Scanner scanner) {
         System.out.println("Ingrese el numero que va adelante de la resta:");
-        double primerNumero = scanner.nextInt();
+        double primerNumero = scanner.nextDouble();
         System.out.println("Ingrese el segundo número:");
-        double segundoNumero = scanner.nextInt();
+        double segundoNumero = scanner.nextDouble();
         double resultadoresta = primerNumero - segundoNumero;
         System.out.println("El resultado de la resta es: " + resultadoresta);
     }
     public static void multiplicacion(Scanner scanner){
         System.out.println("Ingrese el primer número:");
-        double primerNumero = scanner.nextInt();
+        double primerNumero = scanner.nextDouble();
         System.out.println("Ingrese el segundo número:");
-        double segundoNumero = scanner.nextInt();
+        double segundoNumero = scanner.nextDouble();
         double resultadoMultiplicacion = primerNumero * segundoNumero;
         System.out.println("El resultado de la multiplicación es: " + resultadoMultiplicacion);
     }
     public static void division(Scanner scanner){
         System.out.println("Ingrese el numerador de la división:");
-        double numerador = scanner.nextInt();
+        double numerador = scanner.nextDouble();
         System.out.println("Ingrese el denominador de la división:");
-        double denominador = scanner.nextInt();
+        double denominador = scanner.nextDouble();
         double resultadoDivision = numerador / denominador;
         System.out.println("El resultado de la división es: " + resultadoDivision);
     }
+    public static void numeroMayor(Scanner scanner) {
+        System.out.println("Ingrese el primer número:");
+        double primerNumero = scanner.nextDouble();
+        System.out.println("Ingrese el segundo número:");
+        double segundoNumero = scanner.nextDouble();
+        if (primerNumero > segundoNumero){
+            double resultadoNumeroMayor = primerNumero;
+            System.out.println("El número mayor es: " + resultadoNumeroMayor);
+        } else{
+            double resultadoNumeroMayor = segundoNumero;
+            System.out.println("El número mayor es: " + resultadoNumeroMayor);
+        }
+
 
 
 }
