@@ -8,7 +8,7 @@ public class OperacionesAritmeticas {
         do {
             mostrarMenuAritmetica();
             operacionSeleccionada = leerOpcionAritmetica(scanner);
-            ejecutarOpcion(operacionSeleccionada);
+            ejecutarOpcion(operacionSeleccionada, scanner);
         } while (operacionSeleccionada != 9);
 
     }
@@ -29,20 +29,50 @@ public class OperacionesAritmeticas {
         int aritmeticaElegida = scanner.nextInt();
         return aritmeticaElegida;
     }
-    public double[] pedirNumeros(Scanner scanner) {
+    public static double[] pedirNumeros(Scanner scanner) {
         System.out.println("Ingrese el primer número:");
         double primerNumero = scanner.nextInt();
         System.out.println("Ingrese el segundo número:");
         double segundoNumero = scanner.nextInt();
         return new double[]{primerNumero, segundoNumero};
     }
-    public static void ejecutarOpcion(int operacionSeleccionada){
+    public static void ejecutarOpcion(int operacionSeleccionada, Scanner scanner){
+        double[] numeros = pedirNumeros(scanner);
+        double primerNumero = numeros[0];
+        double segundoNumero = numeros[1];
+
         switch(operacionSeleccionada) {
             case 1:
-                suma(scanner);
+                suma(primerNumero, segundoNumero);
                 break;
             case 2:
-                resta(scanner);
+                resta(primerNumero, segundoNumero);
+                break;
+            case 3:
+                multiplicacion(primerNumero, segundoNumero);
+                break;
+            case 4:
+                division(primerNumero, segundoNumero);
+                break;
+            case 5:
+                numeroMayor(primerNumero, segundoNumero);
+                break;
+            case 6:
+                numeroMenor(primerNumero, segundoNumero);
+                break;
+            case 7:
+                potencia(primerNumero, segundoNumero);
+                break;
+            case 8:
+                porcentaje(primerNumero, segundoNumero);
+                break;
+            case 9:
+                Menu menu = new Menu();
+                menu.mostrarMenu();
+                break;
+
+
+
         }
 
     }
