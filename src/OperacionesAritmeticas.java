@@ -71,10 +71,13 @@ public class OperacionesAritmeticas {
                 menu.mostrarMenu();
                 break;
 
-
-
         }
 
     }
+    public static void sumar(double primerNumero, double segundoNumero) {
+        double resultadosuma = primerNumero + segundoNumero;
+        System.out.println("El resultado de la suma es: " + resultadosuma);
+    }
+
 
 }
