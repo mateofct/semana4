@@ -6,6 +6,8 @@ public class Launcher {
         do {
         Menu menu = new Menu();
         menu.mostrarMenu();
+        menuOpcion = Menu.leerOpcion(scanner);
+        Menu.ejecutarOpcion(menuOpcion, scanner);
 
 
         } while (menuOpcion != 6);

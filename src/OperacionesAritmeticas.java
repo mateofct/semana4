@@ -25,15 +25,16 @@ public class OperacionesAritmeticas {
         System.out.println("8. Calcular porcentaje de un número con respecto a otro");
         System.out.println("9. Salir");
     }
+
     public static int leerOpcionAritmetica(Scanner scanner) {
         int aritmeticaElegida = scanner.nextInt();
         return aritmeticaElegida;
     }
 
-    }
-    public static void ejecutarOpcion(int operacionSeleccionada, Scanner scanner){
 
-        switch(operacionSeleccionada) {
+    public static void ejecutarOpcion(int operacionSeleccionada, Scanner scanner) {
+
+        switch (operacionSeleccionada) {
             case 1:
                 suma(scanner);
                 break;
@@ -66,6 +67,7 @@ public class OperacionesAritmeticas {
         }
 
     }
+
     public static void suma(Scanner scanner) {
         System.out.println("Ingrese el primer número:");
         double primerNumero = scanner.nextDouble();
@@ -74,6 +76,7 @@ public class OperacionesAritmeticas {
         double resultadosuma = primerNumero + segundoNumero;
         System.out.println("El resultado de la suma es: " + resultadosuma);
     }
+
     public static void resta(Scanner scanner) {
         System.out.println("Ingrese el numero que va adelante de la resta:");
         double primerNumero = scanner.nextDouble();
@@ -82,7 +85,8 @@ public class OperacionesAritmeticas {
         double resultadoresta = primerNumero - segundoNumero;
         System.out.println("El resultado de la resta es: " + resultadoresta);
     }
-    public static void multiplicacion(Scanner scanner){
+
+    public static void multiplicacion(Scanner scanner) {
         System.out.println("Ingrese el primer número:");
         double primerNumero = scanner.nextDouble();
         System.out.println("Ingrese el segundo número:");
@@ -90,7 +94,8 @@ public class OperacionesAritmeticas {
         double resultadoMultiplicacion = primerNumero * segundoNumero;
         System.out.println("El resultado de la multiplicación es: " + resultadoMultiplicacion);
     }
-    public static void division(Scanner scanner){
+
+    public static void division(Scanner scanner) {
         System.out.println("Ingrese el numerador de la división:");
         double numerador = scanner.nextDouble();
         System.out.println("Ingrese el denominador de la división:");
@@ -98,6 +103,7 @@ public class OperacionesAritmeticas {
         double resultadoDivision = numerador / denominador;
         System.out.println("El resultado de la división es: " + resultadoDivision);
     }
+
     public static void numeroMayor(Scanner scanner) {
         System.out.println("Ingrese el primer número:");
         double primerNumero = scanner.nextDouble();
@@ -111,6 +117,7 @@ public class OperacionesAritmeticas {
             System.out.println("El número mayor es: " + resultadoNumeroMayor);
         }
     }
+
     public static void numeroMenor(Scanner scanner) {
         System.out.println("Ingrese el primer número:");
         double primerNumero = scanner.nextDouble();
@@ -124,7 +131,8 @@ public class OperacionesAritmeticas {
             System.out.println("El número menor es: " + resultadoNumeroMenor);
         }
     }
-    public static void potencia(Scanner scanner){
+
+    public static void potencia(Scanner scanner) {
         System.out.println("Ingrese el valor del número base:");
         double numeroBase = scanner.nextDouble();
         System.out.println("Ingrese el valor del número exponente:");
@@ -133,7 +141,8 @@ public class OperacionesAritmeticas {
         System.out.println("El resultado de la potencia es: " + resultadoPotencia);
 
     }
-    public static void porcentaje(Scanner scanner){
+
+    public static void porcentaje(Scanner scanner) {
         System.out.println("Ingrese el número de porcentaje:");
         double porcentaje = scanner.nextDouble();
         System.out.println("Ingrese el número del cual se quiere calcular el porcentaje:");
@@ -141,4 +150,4 @@ public class OperacionesAritmeticas {
         double resultadoPorcentaje = (porcentaje / 100) * numeroBase;
         System.out.println("El resultado del porcentaje es: " + resultadoPorcentaje);
     }
-
+}
