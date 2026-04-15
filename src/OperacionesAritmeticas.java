@@ -74,9 +74,13 @@ public class OperacionesAritmeticas {
         }
 
     }
-    public static void sumar(double primerNumero, double segundoNumero) {
+    public static void suma(double primerNumero, double segundoNumero) {
         double resultadosuma = primerNumero + segundoNumero;
         System.out.println("El resultado de la suma es: " + resultadosuma);
+    }
+    public static void resta(double primerNumero, double segundoNumero) {
+        double resultadoresta = primerNumero - segundoNumero;
+        System.out.println("El resultado de la resta es: " + resultadoresta);
     }
 
 
