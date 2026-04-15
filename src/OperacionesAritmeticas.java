@@ -4,7 +4,12 @@ public class OperacionesAritmeticas {
 
     public static void menuAritmetica() {
         Scanner scanner = new Scanner(System.in);
-        int
+        int operacionSeleccionada;
+        do {
+            mostrarMenuAritmetica();
+            operacionSeleccionada = leerOpcionAritmetica(scanner);
+            ejecutarOpcion(operacionSeleccionada);
+        } while (operacionSeleccionada != 9);
 
     }
 
@@ -21,7 +26,11 @@ public class OperacionesAritmeticas {
         System.out.println("9. Salir");
     }
     public static int leerOpcionAritmetica(Scanner scanner) {
-        int OperacionSeleccionada = scanner.nextInt();
-        return OperacionSeleccionada;
+        int aritmeticaElegida = scanner.nextInt();
+        return aritmeticaElegida;
     }
+    public static void ejecutarOpcion(int OperacionSeleccionada){
+
+    }
+
 }
