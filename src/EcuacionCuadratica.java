@@ -19,6 +19,10 @@ public class EcuacionCuadratica {
 
 
     }
+    public static void mostrarResultadoCruadratica(){
+        System.out.println("El valor de x1 es: " + x1);
+        System.out.println("El valor de x2 es: " + x2);
+    }
 
 
 }
