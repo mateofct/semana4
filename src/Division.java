@@ -8,6 +8,9 @@ public class Division {public static double[] pedirDatoDivision(Scanner scanner)
     return new double[]{numerador, denominador};
 }
     public static double calcularDivision(double numerador, double denominador){
+        if (denominador == 0){
+            throw new ArithmeticException("No se puede dividir por cero");
+        }
         double resultadoDivision = numerador / denominador;
         return resultadoDivision;
     }
