@@ -52,7 +52,8 @@ public class OperacionesAritmeticas {
                 division.ejecutarDivision(scanner);
                 break;
             case 5:
-                numeroMayor(scanner);
+                NumeroMayor numeroMayor = new NumeroMayor();
+                numeroMayor.ejecutarComparacionNumeroMayor(scanner);
                 break;
             case 6:
                 numeroMenor(scanner);
