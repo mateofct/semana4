@@ -1,6 +1,8 @@
+import java.util.Scanner;
+
 public class FigurasGeometricas {
     // Cuadrado
-    public static double permietroCuadrado(double lado) {
+    public static double perimetroCuadrado(double lado) {
         return 4 * lado;
     }
     public static double areaCuadrado(double lado) {
