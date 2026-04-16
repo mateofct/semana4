@@ -42,7 +42,16 @@ public class OperacionesAritmeticasTest {
         assertEquals(27.5, resultadoDivision);
 
     }
-
+    @Test
+    void comparacionNumeroMayorPositivos(){
+        double resultadoComparacionNumeroMayor = NumeroMayor.compararNumeroMayor(5.5556, 5.5557);
+        assertEquals(5.5557, resultadoComparacionNumeroMayor);
+    }
+    @Test
+    void comparacionNumeroMayorNegativos(){
+        double resultadoComparacionNumeroMayor = NumeroMayor.compararNumeroMayor(-5.5, -1);
+        assertEquals(-1, resultadoComparacionNumeroMayor);
+    }
 
 
 }
