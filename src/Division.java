@@ -29,6 +29,7 @@ public class Division {public static double[] pedirDatoDivision(Scanner scanner)
 
         } catch (Exception e) {
             System.out.println("Tienes que ingresar un número: " + e.getMessage());
+            scanner.nextLine();
         }
 
     }

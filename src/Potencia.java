@@ -32,6 +32,7 @@ public class Potencia {
 
         } catch (Exception e) {
             System.out.println("Tienes que ingresar un número: " + e.getMessage());
+            scanner.nextLine();
         }
     }
 

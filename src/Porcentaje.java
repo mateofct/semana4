@@ -17,10 +17,15 @@ public class Porcentaje {
         System.out.println("El resultado después de calcularle el porcentaje indicado es: " + resultadoPorcentaje);
     }
     public static void ejecutarCalculoPorcentaje(Scanner scanner){
-        double[] datosPorcentaje = pedirDatosPorcentaje(scanner);
-        double porcentaje = datosPorcentaje[0];
-        double Numerobase = datosPorcentaje[1];
-        double resultadoPotencia = calcularPorcentaje(porcentaje, Numerobase);
-        mostrarResultadoPorcentaje(resultadoPotencia);
+        try {
+            double[] datosPorcentaje = pedirDatosPorcentaje(scanner);
+            double porcentaje = datosPorcentaje[0];
+            double Numerobase = datosPorcentaje[1];
+            double resultadoPorcentaje = calcularPorcentaje(porcentaje, Numerobase);
+            mostrarResultadoPorcentaje(resultadoPorcentaje);
+        } catch (Exception e) {
+            System.out.println("Tiene que ingresar un número: " + e.getMessage());
+            scanner.nextLine();
+        }
     }
 }
