@@ -60,7 +60,8 @@ public class OperacionesAritmeticas {
                 numeroMenor.ejecutarComparacionNumeroMenor(scanner);
                 break;
             case 7:
-                potencia(scanner);
+                Potencia potencia = new Potencia();
+                potencia.ejecutarCalculoPOtencia(scanner);
                 break;
             case 8:
                 porcentaje(scanner);
@@ -71,17 +72,6 @@ public class OperacionesAritmeticas {
                 break;
 
         }
-
-    }
-
-
-    public static void potencia(Scanner scanner) {
-        System.out.println("Ingrese el valor del número base:");
-        double numeroBase = scanner.nextDouble();
-        System.out.println("Ingrese el valor del número exponente:");
-        double numeroExponente = scanner.nextDouble();
-        double resultadoPotencia = Math.pow(numeroBase, numeroExponente);
-        System.out.println("El resultado de la potencia es: " + resultadoPotencia);
 
     }
 

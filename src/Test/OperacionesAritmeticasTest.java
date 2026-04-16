@@ -62,6 +62,16 @@ public class OperacionesAritmeticasTest {
         double resultadoComparacionNumeroMenor = NumeroMenor.compararNumeroMenor(-5.5, -1);
         assertEquals(-5.5, resultadoComparacionNumeroMenor);
     }
+    @Test
+    void calcularPotenciaConCeroExponente(){
+        double resultadoPotencia = Potencia.calcularPotencia(5, 0);
+        assertEquals(1, resultadoPotencia);
+    }
+    @Test
+    void potenciaBaseYExponenteSonCero(){
+        double resultadoPotencia = Potencia.calcularPotencia(0, 0);
+        assertEquals(1, resultadoPotencia, "en java el cero elevado a 0 da 1 en vez de indeterminado");
+    }
 
 
 }
