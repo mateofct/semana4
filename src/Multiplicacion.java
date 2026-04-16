@@ -15,10 +15,15 @@ public class Multiplicacion {public static double[] pedirDatosMultipliacion(Scan
         System.out.println("El resultado de la multiplicación es: " + resultadoMultiplicacion);
     }
     public static void ejecutarMultiplicacion(Scanner scanner){
+        try{
         double[] datosMultiplicacion = pedirDatosMultipliacion(scanner);
         double primerNumero = datosMultiplicacion[0];
         double segundoNumero = datosMultiplicacion[1];
         double resultadoMultiplicacion = calcularMultiplicacion(primerNumero, segundoNumero);
         mostrarResultadoMultiplicacion(resultadoMultiplicacion);
+        } catch (Exception e) {
+            System.out.println("Tienes que ingresar un número: " + e.getMessage());
+            scanner.nextLine();
+        }
     }
 }

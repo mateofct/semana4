@@ -16,10 +16,15 @@ public class Suma {
         System.out.println("El resultado de la suma es: " + resultadoSuma);
     }
     public static void ejecutarSuma(Scanner scanner){
-        double[] datosSuma = pedirDatosSuma(scanner);
-        double primerNumero = datosSuma[0];
-        double segundoNumero = datosSuma[1];
-        double resultadoSuma = calcularSuma(primerNumero, segundoNumero);
-        mostrarResultadoSuma(resultadoSuma);
+        try {
+            double[] datosSuma = pedirDatosSuma(scanner);
+            double primerNumero = datosSuma[0];
+            double segundoNumero = datosSuma[1];
+            double resultadoSuma = calcularSuma(primerNumero, segundoNumero);
+            mostrarResultadoSuma(resultadoSuma);
+        } catch (Exception e) {
+            System.out.println("Tienes que ingresar un número: " + e.getMessage());
+            scanner.nextLine();
+        }
     }
 }

@@ -16,10 +16,15 @@ public class Resta {
         System.out.println("El resultado de la resta es: " + resultadoResta);
     }
     public static void ejecutarResta(Scanner scanner){
-        double[] datosResta = pedirDatosResta(scanner);
-        double primerNumero = datosResta[0];
-        double segundoNumero = datosResta[1];
-        double resultadoResta = calcularResta(primerNumero, segundoNumero);
-        mostrarResultadoResta(resultadoResta);
+        try {
+            double[] datosResta = pedirDatosResta(scanner);
+            double primerNumero = datosResta[0];
+            double segundoNumero = datosResta[1];
+            double resultadoResta = calcularResta(primerNumero, segundoNumero);
+            mostrarResultadoResta(resultadoResta);
+        } catch (Exception e) {
+            System.out.println("Tienes que ingresar un número: " + e.getMessage());
+            scanner.nextLine();
+        }
     }
 }

@@ -8,6 +8,9 @@ public class Division {public static double[] pedirDatoDivision(Scanner scanner)
     return new double[]{numerador, denominador};
 }
     public static double calcularDivision(double numerador, double denominador){
+        if (denominador == 0){
+            throw new ArithmeticException("No se puede dividir por cero");
+        }
         double resultadoDivision = numerador / denominador;
         return resultadoDivision;
     }
@@ -15,11 +18,19 @@ public class Division {public static double[] pedirDatoDivision(Scanner scanner)
         System.out.println("El resultado de la división es: " + resultadoDivision);
     }
     public static void ejecutarDivision(Scanner scanner){
-        double[] datosDivision = pedirDatoDivision(scanner);
-        double numerador = datosDivision[0];
-        double denominador = datosDivision[1];
-        double resultadoDivision = calcularDivision(numerador, denominador);
-        mostrarResultadoDivision(resultadoDivision);
+        try {
+            double[] datosDivision = pedirDatoDivision(scanner);
+            double numerador = datosDivision[0];
+            double denominador = datosDivision[1];
+            double resultadoDivision = calcularDivision(numerador, denominador);
+            mostrarResultadoDivision(resultadoDivision);
+        } catch (ArithmeticException e) {
+            System.out.println("Error matemático: " + e.getMessage());
+
+        } catch (Exception e) {
+            System.out.println("Tienes que ingresar un número: " + e.getMessage());
+            scanner.nextLine();
+        }
 
     }
 }
