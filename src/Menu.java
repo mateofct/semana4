@@ -18,13 +18,15 @@ public class Menu {
     public static void ejecutarOpcion(int menuOpcion, Scanner scanner) {
         switch(menuOpcion) {
             case 1:
-                /**OperacionesAritmeticas
+                OperacionesAritmeticas operacionesAritmeticas = new OperacionesAritmeticas();
+                operacionesAritmeticas.menuAritmetica();
                 break;
             case 2:
-                EcuacionCuadratica
+                EcuacionCuadratica ecuacionCuadratica = new EcuacionCuadratica();
+                ecuacionCuadratica.ejecutarCalculoCuadratica(scanner);
                 break;
             case 3:
-                FigurasGeometricas
+                /**FigurasGeometricas
                 break;
             case 4:
                 SistemaEcuacionesLineales
