@@ -72,6 +72,17 @@ public class OperacionesAritmeticasTest {
         double resultadoPotencia = Potencia.calcularPotencia(0, 0);
         assertEquals(1, resultadoPotencia, "en java el cero elevado a 0 da 1 en vez de indeterminado");
     }
+    @Test
+    void porcentajeCien(){
+        double resultadoPorcentaje = Porcentaje.calcularPorcentaje(100, 600);
+        assertEquals(600, resultadoPorcentaje);
+    }
+    @Test
+    void porcentajeCero(){
+        double resultadoPorcentaje = Porcentaje.calcularPorcentaje(0, 600);
+        assertEquals(0, resultadoPorcentaje);
+    }
+
 
 
 }
