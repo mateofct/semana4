@@ -44,13 +44,23 @@ public class OperacionesAritmeticasTest {
     }
     @Test
     void comparacionNumeroMayorPositivos(){
-        double resultadoComparacionNumeroMayor = NumeroMayor.compararNumeroMayor(5.5556, 5.5557);
-        assertEquals(5.5557, resultadoComparacionNumeroMayor);
+        double resultadoComparacionNumeroMayor = NumeroMayor.compararNumeroMayor(0, -1);
+        assertEquals(0, resultadoComparacionNumeroMayor);
     }
     @Test
     void comparacionNumeroMayorNegativos(){
         double resultadoComparacionNumeroMayor = NumeroMayor.compararNumeroMayor(-5.5, -1);
         assertEquals(-1, resultadoComparacionNumeroMayor);
+    }
+    @Test
+    void comparacionNumeroMenorPositivos(){
+        double resultadoComparacionNumeroMenor = NumeroMenor.compararNumeroMenor(21.9, 21.89);
+        assertEquals(21.89, resultadoComparacionNumeroMenor);
+    }
+    @Test
+    void comparacionNumeroMenorNegativos(){
+        double resultadoComparacionNumeroMenor = NumeroMenor.compararNumeroMenor(-5.5, -1);
+        assertEquals(-5.5, resultadoComparacionNumeroMenor);
     }
 
 

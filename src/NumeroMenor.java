@@ -19,7 +19,7 @@ public class NumeroMenor {
 
     }
     public static void mostrarResultadoNumeroMenor(double resultadoNumeroMenor){
-        System.out.println("El mayor número entre los dos es: " + resultadoNumeroMenor);
+        System.out.println("El menor número entre los dos es: " + resultadoNumeroMenor);
     }
     public static void ejecutarComparacionNumeroMenor(Scanner scanner){
         double[] datosNumeroMenor = pedirDatosNumeroMenor(scanner);
