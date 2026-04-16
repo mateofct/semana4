@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class SistemaEcuaciones {
 
-    public static void resolver(Scanner scanner) {
+    public static void sistemaMenu(Scanner scanner) {
 
         System.out.println("\nSistema de Ecuaciones");
 
