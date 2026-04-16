@@ -33,6 +33,7 @@ public class Menu {
                 EcuacionRecta.ejecutar(scanner);
                 break;
             case 6:
+                System.out.println("Saliendo...")
                 break;
         }
 
