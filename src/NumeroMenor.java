@@ -22,11 +22,16 @@ public class NumeroMenor {
         System.out.println("El menor número entre los dos es: " + resultadoNumeroMenor);
     }
     public static void ejecutarComparacionNumeroMenor(Scanner scanner){
-        double[] datosNumeroMenor = pedirDatosNumeroMenor(scanner);
-        double primerNumero = datosNumeroMenor[0];
-        double segundoNumero = datosNumeroMenor[1];
-        double resultadoNumeroMenor = compararNumeroMenor(primerNumero, segundoNumero);
-        mostrarResultadoNumeroMenor(resultadoNumeroMenor);
+        try {
+            double[] datosNumeroMenor = pedirDatosNumeroMenor(scanner);
+            double primerNumero = datosNumeroMenor[0];
+            double segundoNumero = datosNumeroMenor[1];
+            double resultadoNumeroMenor = compararNumeroMenor(primerNumero, segundoNumero);
+            mostrarResultadoNumeroMenor(resultadoNumeroMenor);
+        } catch (Exception e) {
+            System.out.println("Tienes que ingresar un número: " + e.getMessage());
+            scanner.nextLine();
+        }
     }
 }
 
