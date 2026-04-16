@@ -26,6 +26,7 @@ public class Division {public static double[] pedirDatoDivision(Scanner scanner)
             mostrarResultadoDivision(resultadoDivision);
         } catch (ArithmeticException e) {
             System.out.println("Error matemático: " + e.getMessage());
+
         } catch (Exception e) {
             System.out.println("Tienes que ingresar un número: " + e.getMessage());
         }
