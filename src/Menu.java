@@ -26,11 +26,13 @@ public class Menu {
                 ecuacionCuadratica.ejecutarCalculoCuadratica(scanner);
                 break;
             case 3:
-                /**FigurasGeometricas
+                FigurasGeometricas figurasGeometricas = new FigurasGeometricas();
+                figurasGeometricas.figurasMenu(scanner);
                 break;
             case 4:
-                SistemaEcuacionesLineales
-                break;**/
+                SistemaEcuaciones sistemaEcuaciones = new SistemaEcuaciones();
+                sistemaEcuaciones.sistemaMenu(scanner);
+                break;
             case 5:
                 EcuacionRecta.ejecutar(scanner);
                 break;
