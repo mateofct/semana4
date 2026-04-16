@@ -28,10 +28,10 @@ public class Menu {
                 break;
             case 4:
                 SistemaEcuacionesLineales
-                break;
-            case 5:
-                EcuacionRecta
                 break;**/
+            case 5:
+                EcuacionRecta.ejecutar(scanner);
+                break;
             case 6:
                 break;
         }
