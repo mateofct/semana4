@@ -42,6 +42,46 @@ public class OperacionesAritmeticasTest {
         assertEquals(27.5, resultadoDivision);
 
     }
+    @Test
+    void comparacionNumeroMayorPositivos(){
+        double resultadoComparacionNumeroMayor = NumeroMayor.compararNumeroMayor(0, -1);
+        assertEquals(0, resultadoComparacionNumeroMayor);
+    }
+    @Test
+    void comparacionNumeroMayorNegativos(){
+        double resultadoComparacionNumeroMayor = NumeroMayor.compararNumeroMayor(-5.5, -1);
+        assertEquals(-1, resultadoComparacionNumeroMayor);
+    }
+    @Test
+    void comparacionNumeroMenorPositivos(){
+        double resultadoComparacionNumeroMenor = NumeroMenor.compararNumeroMenor(21.9, 21.89);
+        assertEquals(21.89, resultadoComparacionNumeroMenor);
+    }
+    @Test
+    void comparacionNumeroMenorNegativos(){
+        double resultadoComparacionNumeroMenor = NumeroMenor.compararNumeroMenor(-5.5, -1);
+        assertEquals(-5.5, resultadoComparacionNumeroMenor);
+    }
+    @Test
+    void calcularPotenciaConCeroExponente(){
+        double resultadoPotencia = Potencia.calcularPotencia(5, 0);
+        assertEquals(1, resultadoPotencia);
+    }
+    @Test
+    void potenciaBaseYExponenteSonCero(){
+        double resultadoPotencia = Potencia.calcularPotencia(0, 0);
+        assertEquals(1, resultadoPotencia, "en java el cero elevado a 0 da 1 en vez de indeterminado");
+    }
+    @Test
+    void porcentajeCien(){
+        double resultadoPorcentaje = Porcentaje.calcularPorcentaje(100, 600);
+        assertEquals(600, resultadoPorcentaje);
+    }
+    @Test
+    void porcentajeCero(){
+        double resultadoPorcentaje = Porcentaje.calcularPorcentaje(0, 600);
+        assertEquals(0, resultadoPorcentaje);
+    }
 
 
 

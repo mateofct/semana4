@@ -52,16 +52,20 @@ public class OperacionesAritmeticas {
                 division.ejecutarDivision(scanner);
                 break;
             case 5:
-                numeroMayor(scanner);
+                NumeroMayor numeroMayor = new NumeroMayor();
+                numeroMayor.ejecutarComparacionNumeroMayor(scanner);
                 break;
             case 6:
-                numeroMenor(scanner);
+                NumeroMenor numeroMenor = new NumeroMenor();
+                numeroMenor.ejecutarComparacionNumeroMenor(scanner);
                 break;
             case 7:
-                potencia(scanner);
+                Potencia potencia = new Potencia();
+                potencia.ejecutarCalculoPOtencia(scanner);
                 break;
             case 8:
-                porcentaje(scanner);
+                Porcentaje porcentaje = new Porcentaje();
+                porcentaje.ejecutarCalculoPorcentaje(scanner);
                 break;
             case 9:
                 Menu menu = new Menu();
@@ -72,50 +76,4 @@ public class OperacionesAritmeticas {
 
     }
 
-    public static void numeroMayor(Scanner scanner) {
-        System.out.println("Ingrese el primer número:");
-        double primerNumero = scanner.nextDouble();
-        System.out.println("Ingrese el segundo número:");
-        double segundoNumero = scanner.nextDouble();
-        if (primerNumero > segundoNumero) {
-            double resultadoNumeroMayor = primerNumero;
-            System.out.println("El número mayor es: " + resultadoNumeroMayor);
-        } else {
-            double resultadoNumeroMayor = segundoNumero;
-            System.out.println("El número mayor es: " + resultadoNumeroMayor);
-        }
-    }
-
-    public static void numeroMenor(Scanner scanner) {
-        System.out.println("Ingrese el primer número:");
-        double primerNumero = scanner.nextDouble();
-        System.out.println("Ingrese el segundo número:");
-        double segundoNumero = scanner.nextDouble();
-        if (primerNumero < segundoNumero) {
-            double resultadoNumeroMenor = primerNumero;
-            System.out.println("El número menor es: " + resultadoNumeroMenor);
-        } else {
-            double resultadoNumeroMenor = segundoNumero;
-            System.out.println("El número menor es: " + resultadoNumeroMenor);
-        }
-    }
-
-    public static void potencia(Scanner scanner) {
-        System.out.println("Ingrese el valor del número base:");
-        double numeroBase = scanner.nextDouble();
-        System.out.println("Ingrese el valor del número exponente:");
-        double numeroExponente = scanner.nextDouble();
-        double resultadoPotencia = Math.pow(numeroBase, numeroExponente);
-        System.out.println("El resultado de la potencia es: " + resultadoPotencia);
-
-    }
-
-    public static void porcentaje(Scanner scanner) {
-        System.out.println("Ingrese el número de porcentaje:");
-        double porcentaje = scanner.nextDouble();
-        System.out.println("Ingrese el número del cual se quiere calcular el porcentaje:");
-        double numeroBase = scanner.nextDouble();
-        double resultadoPorcentaje = (porcentaje / 100) * numeroBase;
-        System.out.println("El resultado del porcentaje es: " + resultadoPorcentaje);
-    }
 }
