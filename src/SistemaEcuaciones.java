@@ -5,6 +5,11 @@ public class SistemaEcuaciones {
     public static void sistemaMenu(Scanner scanner) {
 
         System.out.println("\nSistema de Ecuaciones");
+        System.out.println("Forma de la ecuacion");
+        System.out.println("A·x + B·y = C");
+        System.out.println("D·x + E·y = F\n");
+
+
 
         System.out.print("A: ");
         double A = scanner.nextDouble();
@@ -35,6 +40,8 @@ public class SistemaEcuaciones {
         double y = ((A * F) - (C * D)) / det;
 
         System.out.println("Resultado:");
+        System.out.println(A + "x + " + B + "y = " + C);
+        System.out.println(D + "x + " + E + "y = " + F);
         System.out.println("x = " + x);
         System.out.println("y = " + y);
     }
