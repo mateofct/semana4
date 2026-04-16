@@ -20,7 +20,7 @@ public class EcuacionRecta {
             double b = calcularInterseccion(x1, y1, m);
 
             if (b >= 0) {
-                System.out.println("La ecuación es:);
+                System.out.println("La ecuación es:");
                 System.out.println("Y = " + m + "X + " + b);
             } else {
                 // b negativo
