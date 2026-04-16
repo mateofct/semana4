@@ -33,13 +33,11 @@ public class Menu {
                 EcuacionRecta.ejecutar(scanner);
                 break;
             case 6:
-                System.out.println("Saliendo...")
+                System.out.println("Saliendo...");
+                break;
+            default:
+                System.out.println("Ingrese un número válido (1-6).");
                 break;
         }
-
     }
-
-
-
-
 }
